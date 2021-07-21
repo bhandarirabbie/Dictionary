@@ -12,12 +12,12 @@ public class WordMeaning {
             String meaning = scanner.nextLine();
             HashMap<String, String> dic = new HashMap <>();
             dic.put(fWord, meaning);
-            File file = new File("/home/rabin/Desktop/WordMeaning.txt");
+            File file = new File("/home/rabin/Desktop/WordMeaning.ods");
             PrintWriter writer;
             FileOutputStream out = new FileOutputStream(file, true);
 
             writer = new PrintWriter(out);
-            writer.append(String.valueOf(dic));
+            writer.append(fWord + "," + meaning + "\n");
             writer.flush();
             writer.close();
 
